@@ -4,11 +4,14 @@
 
 	<!--Mybatis 설정 -->
 	<settings>
-		<!-- 전통적인 데이터베이스 컬럼명 형태인 A_COLUMN을 CamelCase형태의 자바 프로퍼티명 형태인 aColumn으로 자동으로 매핑하도록 함 -->
-		<!-- <setting name="mapUnderscoreToCamelCase" value="true"></setting> -->
+		<!-- 전통적인 데이터베이스 컬럼명 형태인 A_COLUMN을 CamelCase형태의 자바 프로퍼티명 형태인 aColumn으로 자동으로 매핑하도록 함
+		map는 적용안됨 단지 Vo만 적용됨 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
 		<!--  파라미터에 Null 값이 있을 경우 에러 처리 -->
 		<setting name="jdbcTypeForNull" value="VARCHAR"/> 
 	</settings>
 	
-<typeAliases></typeAliases>
+<typeAliases>
+
+</typeAliases>
 </configuration>

@@ -11,16 +11,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.hyungsuu.apigate.samaple.web.UserController;
 import com.hyungsuu.common.filter.InitMDCFilter;
 
+import lombok.extern.slf4j.Slf4j;
 
 
 
+@Slf4j
 @Configuration
 public class FilterConfig implements WebMvcConfigurer {
 
 
-	 private static final Logger log = LoggerFactory.getLogger(FilterConfig.class);
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public FilterRegistrationBean loggingFilter() {
@@ -34,7 +36,4 @@ public class FilterConfig implements WebMvcConfigurer {
 	        firstFilter.setName("InitMDCFilter");
 	        return firstFilter;
 	    }
-
-	
-
 }

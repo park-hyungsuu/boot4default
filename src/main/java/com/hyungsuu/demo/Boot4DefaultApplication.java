@@ -3,31 +3,26 @@ package com.hyungsuu.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.server.servlet.context.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.stereotype.Component;
 
-@ServletComponentScan
 @ComponentScan(basePackages = {"com.hyungsuu"})
-@PropertySources({
-@PropertySource("classpath:globals.properties")
-})
+//@PropertySources({
+//@PropertySource("classpath:/ecid/egovProps/globals.properties")
+//})
 @SpringBootApplication
-public class DemoApplication extends SpringBootServletInitializer {
+public class Boot4DefaultApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(DemoApplication.class);
+		return application.sources(Boot4DefaultApplication.class);
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(Boot4DefaultApplication.class, args);
 	}
 	
 	@Bean

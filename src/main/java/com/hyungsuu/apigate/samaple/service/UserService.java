@@ -15,9 +15,9 @@ public interface UserService {
 
 
 	UserResVo selectUser(HashMap<String, Object> userMap) throws Exception;
-	int insertUser(UserReqVo userReqVo) throws GlobalException, Exception;
-	int updateUser(UserReqVo userReqVo) throws GlobalException, Exception;
-	int deleteUser(HashMap<String, Object> userMap) throws GlobalException, Exception;
-	List<Object> selectUserPage(HashMap<String, Object> userMap) throws GlobalException, Exception;
+//	int insertUser(UserReqVo userReqVo) throws GlobalException, Exception;
+//	int updateUser(UserReqVo userReqVo) throws GlobalException, Exception;
+//	int deleteUser(HashMap<String, Object> userMap) throws GlobalException, Exception;
+//	List<Object> selectUserPage(HashMap<String, Object> userMap) throws GlobalException, Exception;
 	
 }

@@ -17,8 +17,23 @@
 		user
 		WHERE
 		user_Id=#{userId}
-
 	</select>
+
+	<select id="selectUserAndPass" parameterType="JwtTokenReqVo"
+		resultType="hashMap">
+		SELECT
+		user_id as "userId"
+		, user_passwd as "userPasswd"
+		, user_auth as "userAuth"
+		, user_name as "userName"
+		, reg_date as "regDate"
+		FROM
+		user
+		WHERE
+		user_Id=#{userId}
+		AND user_passwd=#{userPasswd}
+	</select>
+
 
 	<insert id="insertUser" parameterType="userReqVo">
 		INSERT INTO
