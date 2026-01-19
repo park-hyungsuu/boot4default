@@ -27,12 +27,6 @@ public class DatabaseConfig {
 		return new DataSourceTransactionManager(dataSource);
 	}
 
-//	  @Bean
-//	    public DataSource dataSource() {
-//	        // Configure custom DataSource properties or use properties from application.properties
-//	        // For Mybatis, you might return a SqlSessionFactoryBean here [1].
-//	        return new HikariDataSource(); // Example if you need a specific Hikari DataSource bean
-//	    }
 	@Bean
 	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();

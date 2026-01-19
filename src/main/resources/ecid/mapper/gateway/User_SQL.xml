@@ -63,7 +63,7 @@
 		WHERE user_id = #{userId}
 
 	</update>
-	<delete id="deleteUser" parameterType="hashMap">
+	<delete id="deleteUser" parameterType="userReqVo">
 		DELETE
 		FROM
 		user
@@ -83,8 +83,8 @@
 		user
 		
               order by reg_date desc  
-            <if test="startData != null and pageSize != null">
-                LIMIT #{startData} , #{pageSize}
+            <if test="offset != null and limit != null">
+                LIMIT #{offset} , #{limit}
             </if>
     </select>
 </mapper>
