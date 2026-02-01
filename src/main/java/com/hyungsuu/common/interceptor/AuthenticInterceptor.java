@@ -1,14 +1,10 @@
 package com.hyungsuu.common.interceptor;
 
-import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.WebContentInterceptor;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hyungsuu.common.exception.GlobalException;
 import com.hyungsuu.common.util.JwtTokenUtil;
-import com.hyungsuu.common.vo.BaseResponseVo;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
